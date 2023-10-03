@@ -60,7 +60,7 @@
         <Button
             android:id="@+id/btnDivide"
             android:layout_margin="2dp"
-            android:onClick="onDigit"
+            android:onClick="omOperator"
             android:layout_width="0dp"
             tools:ignore="UsingOnClickInXML"
             android:layout_height="match_parent"
@@ -111,7 +111,7 @@
         <Button
             android:id="@+id/btnMultiply"
             android:layout_margin="2dp"
-            android:onClick="onDigit"
+            android:onClick="omOperator"
             android:layout_width="0dp"
             tools:ignore="UsingOnClickInXML"
             android:layout_height="match_parent"
@@ -162,7 +162,7 @@
         <Button
             android:id="@+id/btnMinus"
             android:layout_margin="2dp"
-            android:onClick="onDigit"
+            android:onClick="omOperator"
             android:layout_width="0dp"
             tools:ignore="UsingOnClickInXML"
             android:layout_height="match_parent"
@@ -215,7 +215,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="2dp"
-            android:onClick="onDigit"
+            android:onClick="omOperator"
             android:layout_weight="1"
             android:text="@string/plus"
             tools:ignore="UsingOnClickInXML"
