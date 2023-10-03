@@ -19,25 +19,34 @@ import com.example.mycalc.ui.theme.MyCalcTheme
 class MainActivity : ComponentActivity() {
 
     private var tvInput: TextView? = null
-    private var btnOne: Button? = null
+    var lastNumeric : Boolean  = false
+    var lastDot : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         tvInput = findViewById(R.id.tvInput)
-        btnOne = findViewById(R.id.btnOne)
-        btnOne?.setOnClickListener{
-            tvInput?.append("1")
-        }
+
+
     }
 
     fun onDigit(view: View){
         tvInput?.append((view as Button) .text)
+        lastNumeric = true
+        lastDot = false
     }
 
     fun onCLear(view: View) {
         tvInput?.text = ""
+    }
+
+    fun onDecimalPoint(view: View) {
+        if(lastNumeric && !lastDot) {
+            tvInput?.append(".")
+            lastNumeric = false;
+            lastDot = true;
+        }
     }
 
 }
